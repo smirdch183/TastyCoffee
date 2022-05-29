@@ -1,0 +1,28 @@
+﻿<Window x:Class="TastyCoffee.FolderWindow.WindowUserMyZakaz"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TastyCoffee.FolderWindow"
+        mc:Ignorable="d"
+        Title="Мой заказ"
+        WindowStartupLocation="CenterScreen"
+        Window.SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Style="{DynamicResource Logo}" Width="100"/>
+        <Label Grid.Column="1" Grid.ColumnSpan="2" Content="Мои заказы" Style="{DynamicResource LogoLabel}"/>
+        <DataGrid x:Name="DgZakaz" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="4" MouseDoubleClick="DgZakaz_MouseDoubleClick"/>
+    </Grid>
+</Window>

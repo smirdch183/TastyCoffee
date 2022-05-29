@@ -1,0 +1,48 @@
+﻿<Window x:Class="TastyCoffee.FolderWindow.WindowAdminAddTae"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TastyCoffee.FolderWindow"
+        mc:Ignorable="d"
+        Title="Добавление чая"
+        WindowStartupLocation="CenterScreen"
+        Window.SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Style="{DynamicResource Logo}" Width="80"/>
+        <Label Grid.Column="1" Grid.ColumnSpan="7" Content="Чай" Style="{DynamicResource LogoLabel}"/>
+        <StackPanel Grid.Row="1" Grid.RowSpan="4">
+            <Label Content="Название" Style="{DynamicResource Label}" Margin="10"/>
+            <Label Content="Цена" Style="{DynamicResource Label}" Margin="10"/>
+            <Label Content="Количество" Style="{DynamicResource Label}" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="4">
+            <TextBox x:Name="TbName" Margin="10"/>
+            <TextBox x:Name="TbPrice" Margin="10"/>
+            <TextBox x:Name="TbColvo" Margin="10"/>
+        </StackPanel>
+        <DataGrid x:Name="DgTea" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" Grid.RowSpan="5" SelectedCellsChanged="DgCoffee_SelectedCellsChanged"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="7" Grid.ColumnSpan="6">
+            <Button x:Name="BnAdd" Content="Добавить" Grid.Column="1" Grid.Row="13" Click="BnAdd_Click"/>
+            <Button x:Name="BnEdit" Content="Редактировать" Grid.Column="3" Grid.Row="13" Click="BnEdit_Click"/>
+            <Button x:Name="BnDelet" Content="Удалить" Grid.Column="5" Grid.Row="13" Click="BnDelet_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

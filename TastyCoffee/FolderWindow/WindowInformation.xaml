@@ -1,0 +1,31 @@
+﻿<Window x:Class="TastyCoffee.FolderWindow.WindowInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TastyCoffee.FolderWindow"
+        mc:Ignorable="d"
+        Title="Настройки" Window.SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="BnPassword" Content="Изменить пароль" Grid.Column="1" Grid.Row="1" Click="BnPassword_Click"/>
+        <Button x:Name="BnEdit" Content="Редактировать информацию" Grid.Column="1" Grid.Row="2" Click="BnEdit_Click"/>
+        <Button x:Name="BnInfo" Content="Просмотр информации" Grid.Column="1" Grid.Row="3" Click="BnInfo_Click"/>
+        <Button x:Name="BnBack" Content="Назад" Grid.Column="1" Grid.Row="4" Click="BnBack_Click"/>
+    </Grid>
+</Window>
